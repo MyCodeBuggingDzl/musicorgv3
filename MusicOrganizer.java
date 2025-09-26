@@ -115,12 +115,29 @@ public class MusicOrganizer
             player.playSample(filename);
         }
     }
-    public void listMatcing(String searchString)
+    public void listMatching(String searchString)
     {
+        boolean found = false;
         for(String filename : files) {
             if(filename.contains(searchString)){
+                System.out.println("Found your file");
                 System.out.println(filename);
+                found = true;
             }
+            else  {
+                System.out.println("No file found");
+        }
+        if(filename.equals(searchString)){
+            System.out.println("Error, no file found");
+        }
+        }
+    }
+    public void playArtist(String artist)
+    {
+        for(String filename : files) {
+            if(filename.contains(artist))
+                 player.playSample(filename);
+                 System.out.println("Playing"+ artist + filename);
         }
     }
     /**
