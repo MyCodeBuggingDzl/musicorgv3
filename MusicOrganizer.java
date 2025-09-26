@@ -57,11 +57,21 @@ public class MusicOrganizer
      */
     public void listAllFiles()
     {
+        
         for(String filename : files) {
             System.out.println(filename);
+        
         }
     }
     
+    public void listWithIndex()
+    {
+        int position = 0;
+        for(String filename : files){
+        System.out.println(position+":"+filename);
+        position++;
+        }
+    }
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
@@ -105,7 +115,12 @@ public class MusicOrganizer
             player.playSample(filename);
         }
     }
-
+    public void listMatcing(String searchString)
+    {
+        for(String filename : files) {
+            if(filename.contains(
+        }
+    }
     /**
      * Determine whether the given index is valid for the collection.
      * Print an error message if it is not.
