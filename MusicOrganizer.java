@@ -118,7 +118,9 @@ public class MusicOrganizer
     public void listMatcing(String searchString)
     {
         for(String filename : files) {
-            if(filename.contains(
+            if(filename.contains(searchString)){
+                System.out.println(filename);
+            }
         }
     }
     /**
